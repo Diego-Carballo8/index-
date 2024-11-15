@@ -1,0 +1,141 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo difuminado para la página completa */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #9122b3f8, #db40db, #db76d6, #7d6288);
+    background-size: 200% 200%; /* Ampliación para un efecto más suave */
+    animation: gradientAnimation 15s ease infinite; /* Animación suave */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Animación de fondo degradado */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Estilo del header */
+.header-section {
+    width: 150%;
+    height: 60vh;
+    background: linear-gradient(120deg, rgba(0, 123, 255, 0.7), rgba(255, 99, 71, 0.7)), 
+                url('https://i.imgur.com/IGdONBT.jpeg') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor de login */
+.login-container {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    padding: 20px;
+    margin-top: -50px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: fade-in 1.5s ease-out;
+}
+
+/* Estilos del formulario */
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo de los inputs y botones */
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0088cc;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Estilo para el enlace de "¿Olvidaste tu contraseña?" */
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    color: #00aaff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #0088cc;
+}
+
+/* Estilo para el enlace de registro */
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.register-link a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #0088cc;
+}
+
+/* Animación de fade-in para el contenedor de login */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
